@@ -54,7 +54,7 @@ setInterval(() => {
 }, 1000);
 
 
-bot.on('message', (msg) => {
+bot.on('message', msg => {
   const chatId = msg.from.id;
   checkHi.includes(msg.text.toLowerCase()) && bot.sendMessage(chatId, `Ну здравствуй ${msg.from.first_name}`);
   checkWeather.includes(msg.text.toLowerCase()) && wearRequest(chatId);
@@ -63,12 +63,22 @@ bot.on('message', (msg) => {
 });
 
 
-const westRequest = async (chatId) => {
-  const response = await axios.get('https://api.kanye.rest?format=text')
-  bot.sendMessage(chatId, response.data);
+const westRequest = async chatId => {
+  try {
+    const response = await axios.get('https://api.kanye.rest?format=text')
+    bot.sendMessage(chatId, response.data);
+  } catch {
+    bot.sendMessage(chatId, 'Упс... Произошла ошибка попробуйте похже :)')
+  }
+
 }
 
-const wearRequest = async (chatId) => {
-  const response = await axios.get('http://api.openweathermap.org/data/2.5/weather?id=520555&lang=ru&appid=73c311ccad15433d53b81a3674478271')
-  bot.sendMessage(chatId, `Доброе утро \nВ Нижнем сейчас ${response.data.weather[0].description} \nТемпература воздуха: ${kelvinToCelsius(response.data.main.temp)} \nОщущается как: ${kelvinToCelsius(response.data.main.feels_like)} \nОжидаемая максимальная температура воздуха составит: ${kelvinToCelsius(response.data.main.temp_max)}`);
+const wearRequest = async chatId => {
+  try {
+    const response = await axios.get('http://api.openweathermap.org/data/2.5/weather?id=520555&lang=ru&appid=73c311ccad15433d53b81a3674478271')
+    bot.sendMessage(chatId, `В Нижнем сейчас ${response.data.weather[0].description} \nТемпература воздуха: ${kelvinToCelsius(response.data.main.temp)} \nОщущается как: ${kelvinToCelsius(response.data.main.feels_like)} \nОжидаемая максимальная температура воздуха составит: ${kelvinToCelsius(response.data.main.temp_max)}`);
+  } catch {
+    bot.sendMessage(chatId, 'Упс... Произошла ошибка попробуйте похже :)')
+  }
 }
+
