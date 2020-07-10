@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="71364005-645d-4211-a0e2-a2bb3efd5a9a" name="Default Changelist" comment="">
+    <list default="true" id="71364005-645d-4211-a0e2-a2bb3efd5a9a" name="Default Changelist" comment="Init telegram bot">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +66,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594314642174</updated>
-      <workItem from="1594314644507" duration="18276000" />
+      <workItem from="1594314644507" duration="20513000" />
+      <workItem from="1594390589417" duration="298000" />
+      <workItem from="1594390899645" duration="69000" />
+      <workItem from="1594390990677" duration="17000" />
     </task>
+    <task id="LOCAL-00001" summary="Init telegram bot">
+      <created>1594376260206</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1594376260206</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -72,8 +94,21 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init telegram bot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init telegram bot" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="640" y="260" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1594390965028">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="640" y="260" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1594390965028" />
+    <state x="540" y="259" key="IDE.errors.dialog" timestamp="1594390931083">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="540" y="259" key="IDE.errors.dialog/0.0.1920.1050@0.0.1920.1050" timestamp="1594390931083" />
     <state x="461" y="169" key="SettingsEditor" timestamp="1594372226678">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
