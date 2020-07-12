@@ -75,7 +75,7 @@ const westRequest = async chatId => {
 
 const wearRequest = async chatId => {
   try {
-    const response = await axios.get('http://api.openweathermap.org/data/2.5/weather?id=520555&lang=ru&appid=73c311ccad15433d53b81a3674478271')
+    const response = await axios.get(`http://api.openweathermap.org/data/2.5/weather?id=520555&lang=ru&appid=${process.env.KEY_OPEN_WEATHER_MAP}`)
     bot.sendMessage(chatId, `В Нижнем сейчас ${response.data.weather[0].description} \nТемпература воздуха: ${kelvinToCelsius(response.data.main.temp)} \nОщущается как: ${kelvinToCelsius(response.data.main.feels_like)} \nОжидаемая максимальная температура воздуха составит: ${kelvinToCelsius(response.data.main.temp_max)}`);
   } catch {
     bot.sendMessage(chatId, 'Упс... Произошла ошибка попробуйте похже :)')
